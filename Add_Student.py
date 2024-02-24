@@ -20,13 +20,13 @@ class student():
         }
     def new_student(self):
         if "student_info.json" in os.listdir("./database"):
-            with open("./database/student_info.json","r",encoding="utf-8") as file:
+            with open("./FaceTrack-Attendance-System/database/student_info.json","r",encoding="utf-8") as file:
                 temp_dict = json.load(fp=file)
             temp_dict.update(self.student_info)
-            with open("./database/student_info.json","w",encoding="utf-8") as file:
+            with open("./FaceTrack-Attendance-System/database/student_info.json","w",encoding="utf-8") as file:
                 json.dump(temp_dict,fp=file)
         else:
-            with open("./database/student_info.json","w") as file:
+            with open("./FaceTrack-Attendance-System/database/student_info.json","w") as file:
                 json.dump(self.student_info,fp=file)
         
 
@@ -48,7 +48,7 @@ def take_image():
             
             if k == ord('c'):
 
-                cv2.imwrite(filename=f"./database/assets/{s1.en_no}.jpg",img = frame)
+                cv2.imwrite(filename=f"./FaceTrack-Attendance-System/database/assets/{s1.en_no}.jpg",img = frame)
                 image_no+=1
         if image_no==1 or k == ord('q'):
             break
