@@ -8,6 +8,6 @@ It is the main face recgonization model which will recognize whose face is in th
 ## 3) Take_Attendance.py 
 This file will capture real time faces and will match it with the datbase images and then Provide related id of the image.
 
-_ pre-model is the algorithm which will realtime detect the nodes of the faces._
+_Pre-model is the algorithm which will realtime detect the nodes of the faces._
 
 
