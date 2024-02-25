@@ -9,7 +9,7 @@ def get_data():
     en_no_list = []
     
     
-    data_path = './FaceTrack-Attendance-System/database/assets'
+    data_path = './FaceSnap-Attendance-System/database/assets'
     images_path = os.listdir(path=data_path)
     # print(images_name)
     for image_path in images_path:
@@ -38,7 +38,7 @@ def get_encoding():
 def create_encode_file():
     encoded_img_eno_list = []
     encoded_img_eno_list = [encoded_image_list,en_no_list]
-    with open('./FaceTrack-Attendance-System/database/enc_img_eno_list.p','wb') as file:
+    with open('./FaceSnap-Attendance-System/database/enc_img_eno_list.p','wb') as file:
         pickle.dump(encoded_img_eno_list,file=file)
     print('file saved')
 
