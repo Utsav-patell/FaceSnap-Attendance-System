@@ -21,3 +21,6 @@ Use this to use this project it contains all the operations of the project.
 
 IF YOU GET ERROR WHILE DOWNLOADING FACE-recognization Library then try to mannualy install the wheel of DLIB and then try again.
 Use this - https://github.com/sachadee/Dlib to mannualy install wheel.
+
+
+**Note** - I changed my repo name from FaceTrack to FaceSnap because i found out that there is one more repo of name FaceTrack that is why to avoid the chance of Plagarism i did that. I have not copied anything from that repo. Please cross check it. 
