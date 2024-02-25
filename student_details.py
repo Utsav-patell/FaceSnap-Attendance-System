@@ -1,12 +1,11 @@
 import pandas as pd
 import os
-from IPython.display import display
 
 def read_csv():
     global student_details
     student_details = []
-    for files in os.listdir("./FaceTrack-Attendance-System/csv_files"):
-        df = pd.read_csv(f"./FaceTrack-Attendance-System/csv_files/{files}")
+    for files in os.listdir("./FaceSnap-Attendance-System/csv_files"):
+        df = pd.read_csv(f"./FaceSnap-Attendance-System/csv_files/{files}")
         student_details.append(df)
 # print(len(student_details))
 def combine_dataframe():
