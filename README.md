@@ -19,4 +19,5 @@ This will provide all the previous attendance of the students marked inshort it 
 ## 6) main.py
 Use this to use this project it contains all the operations of the project.
 
-
+IF YOU GET ERROR WHILE DOWNLOADING FACE-recognization Library then try to mannualy install the wheel of DLIB and then try again.
+Use this - https://github.com/sachadee/Dlib to mannualy install wheel.
