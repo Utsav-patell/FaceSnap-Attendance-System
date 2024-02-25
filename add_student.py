@@ -19,7 +19,7 @@ class student():
             }
         }
     def new_student(self):
-        if "student_info.json" in os.listdir("./database"):
+        if "student_info.json" in os.listdir("./FaceSnap-Attendance-System/database"):
             with open("./FaceSnap-Attendance-System/database/student_info.json","r",encoding="utf-8") as file:
                 temp_dict = json.load(fp=file)
             temp_dict.update(self.student_info)
