@@ -71,10 +71,10 @@ def take_attendasnce(k,resize_image):
                     "Day":cur_day,
                     "Time":cur_time
                 }
-                print(matches)
-                print(face_distance)
-                print(face_distance[predicted_index])
-                print(student_dict[match_key]['name'])
+                # print(matches)
+                # print(face_distance)
+                # print(face_distance[predicted_index])
+                print(f"{match_key},Your attendance is marked...")
                 save_csv(info_dict)
                 
                 # print(f"face_distance = {face_distance[predicted_index]}")
