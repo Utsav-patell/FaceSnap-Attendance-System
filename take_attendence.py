@@ -15,13 +15,13 @@ def play_music(path):
     mixer.music.play()
      
 def save_csv(info_dict):
-    if f"{cur_date}.csv" in os.listdir("./FaceTrack-Attendance-System/csv_files"):
-        with open(f"./FaceTrack-Attendance-System/csv_files/{cur_date}.csv","a") as csv_file:
+    if f"{cur_date}.csv" in os.listdir("./FaceSnap-Attendance-System/csv_files"):
+        with open(f"./FaceSnap-Attendance-System/csv_files/{cur_date}.csv","a") as csv_file:
             titles = ["Enrollment No","Name","Branch","Date","Day","Time"]
             writer = csv.DictWriter(csv_file,titles)
             writer.writerow(info_dict)
     else:
-        with open (f"./FaceTrack-Attendance-System/csv_files/{cur_date}.csv","w") as csv_file:
+        with open (f"./FaceSnap-Attendance-System/csv_files/{cur_date}.csv","w") as csv_file:
             titles = ["Enrollment No","Name","Branch","Date","Day","Time"]
             writer = csv.DictWriter(csv_file,titles)
             writer.writeheader()
@@ -32,13 +32,13 @@ def save_csv(info_dict):
 
 def load_encoded_file():
     global old_encoded_image,en_no_list
-    with open('./FaceTrack-Attendance-System/database/enc_img_eno_list.p','rb') as file: 
+    with open('./FaceSnap-Attendance-System/database/enc_img_eno_list.p','rb') as file: 
         old_encoded_image,en_no_list = pickle.load(file=file)
 
 
 def load_student_info():
     global student_dict
-    with open('./FaceTrack-Attendance-System/database/student_info.json','r') as file: 
+    with open('./FaceSnap-Attendance-System/database/student_info.json','r') as file: 
         student_dict = json.load(fp=file)
         
 def today_date():
@@ -61,7 +61,7 @@ def take_attendasnce(k,resize_image):
             # print(f"distance = {face_distance}")
             predicted_index = np.argmin(face_distance)
             if matches[predicted_index] and face_distance[predicted_index]<0.5:
-                play_music("./FaceTrack-Attendance-System/database/Correct_ans.mp3")
+                play_music("./FaceSnap-Attendance-System/database/Correct_ans.mp3")
                 match_key = en_no_list[predicted_index]
                 info_dict = {
                     "Name":student_dict[match_key]['name'],
@@ -85,7 +85,7 @@ def take_attendasnce(k,resize_image):
 
 
 def take_image():
-    face_capture = "./FaceTrack-Attendance-System/pre-model/haarcascade_frontalface_default.xml"
+    face_capture = "./FaceSnap-Attendance-System/pre-model/haarcascade_frontalface_default.xml"
     cam = cv2.VideoCapture(0)
     face_box = cv2.CascadeClassifier(face_capture)
 
