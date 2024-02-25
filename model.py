@@ -17,8 +17,8 @@ def get_data():
         image_list.append(cv2.imread(os.path.join(data_path,image_path)))
         en_no_list.append(os.path.splitext(image_path)[0])
         
-    print(len(image_list))
-    print(len(en_no_list))
+    # print(len(image_list))
+    # print(len(en_no_list))
 
 def get_encoding():
     global encoded_image_list
@@ -28,8 +28,8 @@ def get_encoding():
         encoded_image = face_recognition.face_encodings(image)[0]
         encoded_image_list.append(encoded_image)
         
-    print(type(encoded_image))
-    print(len(encoded_image))
+    # print(type(encoded_image))
+    # print(len(encoded_image))
 
 
 # print(encoded_img_eno_list)
