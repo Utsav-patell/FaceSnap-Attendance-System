@@ -7,7 +7,7 @@ def load_encoded_file():
     en_no = input("Enter the en_no to remove: ")
     global encoded_img
     global en_no_list
-    with open('./FaceTrack-Attendance-System/database/enc_img_eno_list.p','rb') as file: 
+    with open('./FaceSnap-Attendance-System/database/enc_img_eno_list.p','rb') as file: 
         encoded_img,en_no_list = pickle.load(file=file)
 
 def remove_enno(en_no_list):
@@ -25,7 +25,7 @@ def remove_encoded_image(encoded_image_list):
 
 
 def remove_image(en):
-    path = "./FaceTrack-Attendance-System/database/assets"
+    path = "./FaceSnap-Attendance-System/database/assets"
     images = os.listdir(path=path)
     # print(images)
     # print(os.path.splitext(images[0]))
@@ -37,7 +37,7 @@ def remove_image(en):
             
 def create_encode_file():
     encoded_img_eno_list = [encoded_img,en_no_list]
-    with open('./FaceTrack-Attendance-System/database/enc_img_eno_list.p','wb') as file:
+    with open('./FaceSnap-Attendance-System/database/enc_img_eno_list.p','wb') as file:
         pickle.dump(encoded_img_eno_list,file=file)
     print('file saved')
 
